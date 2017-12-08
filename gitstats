@@ -22,7 +22,7 @@ from multiprocessing import Pool
 
 os.environ['LC_ALL'] = 'C'
 
-GNUPLOT_COMMON = 'set terminal png transparent size 640,240\nset size 1.0,1.0\n'
+GNUPLOT_COMMON = 'set terminal png transparent size 1280,480\nset size 1.0,1.0\n'
 ON_LINUX = (platform.system() == 'Linux')
 WEEKDAYS = ('Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun')
 
@@ -1312,7 +1312,7 @@ plot 'lines_of_code.dat' using 1:2 w lines
 		f.write(GNUPLOT_COMMON)
 		f.write(
 """
-set terminal png transparent size 640,480
+set terminal png transparent size 1280,1024
 set output 'lines_of_code_by_author.png'
 set key left top
 set yrange [0:]
@@ -1341,7 +1341,7 @@ plot """
 		f.write(GNUPLOT_COMMON)
 		f.write(
 """
-set terminal png transparent size 640,480
+set terminal png transparent size 1280,1024
 set output 'commits_by_author.png'
 set key left top
 set yrange [0:]
