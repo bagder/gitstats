@@ -970,9 +970,9 @@ class HTMLReportCreator(ReportCreator):
 		f.write('</table>')
 
 		allauthors = data.getAuthors()
-		if len(allauthors) > conf['max_authors']:
-			rest = allauthors[conf['max_authors']:]
-			f.write('<p class="moreauthors">These didn\'t make it to the top: %s</p>' % ', '.join(rest))
+		#if len(allauthors) > conf['max_authors']:
+		#	rest = allauthors[conf['max_authors']:]
+		#	f.write('<p class="moreauthors">These didn\'t make it to the top: %s</p>' % ', '.join(rest))
 
 		f.write(html_header(2, 'Cumulated Added Lines of Code per Author'))
 		f.write('<img src="lines_of_code_by_author.png" alt="Lines of code per Author">')
