@@ -45,6 +45,10 @@ Defaults to on.
 
 How many authors to show in the list of authors.
 
+=item max_authors_top
+
+How many authors to show in the authors top list.
+
 =item max_domains
 
 How many domains to show in domains by commits.
