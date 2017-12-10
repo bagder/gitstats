@@ -961,7 +961,7 @@ class HTMLReportCreator(ReportCreator):
 		self.printNav(f)
 
 		# Authors :: List of authors
-		f.write(html_header(2, 'List of Authors'))
+		f.write(html_header(2, 'Author toplist'))
 
 		f.write('<table class="authors sortable" id="authors">')
 		f.write('<tr><th>Author</th><th>Commits (%)</th><th>+ lines</th><th>- lines</th><th>First commit</th><th>Last commit</th><th class="unsortable">Age</th><th>Active days</th><th># by commits</th></tr>')
@@ -1018,7 +1018,7 @@ class HTMLReportCreator(ReportCreator):
 		fgc.close()
 
 		# Authors :: Author of Month
-		f.write(html_header(2, 'Author of Month'))
+		f.write(html_header(2, 'Author of the Month'))
 		f.write('<table class="sortable" id="aom">')
 		f.write('<tr><th>Month</th><th>Author</th><th>Commits (%%)</th><th class="unsortable">Next top %d</th><th>Number of authors</th></tr>' % conf['authors_top'])
 		for yymm in reversed(sorted(data.author_of_month.keys())):
@@ -1031,7 +1031,7 @@ class HTMLReportCreator(ReportCreator):
 
 		f.write('</table>')
 
-		f.write(html_header(2, 'Author of Year'))
+		f.write(html_header(2, 'Author of the Year'))
 		f.write('<table class="sortable" id="aoy"><tr><th>Year</th><th>Author</th><th>Commits (%%)</th><th class="unsortable">Next top %d</th><th>Number of authors</th></tr>' % conf['authors_top'])
 		for yy in reversed(sorted(data.author_of_year.keys())):
 			authordict = data.author_of_year[yy]
