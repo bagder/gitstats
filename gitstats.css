@@ -105,6 +105,10 @@ img {
 	background-color: white;
 }
 
+img.graph {
+        width: 70%;
+}
+
 th img {
 	border: 0px;
 	padding: 0px;
